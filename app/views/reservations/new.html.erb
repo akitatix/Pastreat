@@ -1,2 +1,9 @@
 <h1>Reservations#new</h1>
-<p>Find me in app/views/reservations/new.html.erb</p>
+
+<%= simple_form_for [@boulangerie, @reservation] do |f| %>
+  <%= f.input :date %>
+  <%= f.input :price %>
+  <%= f.input :nb_cr %>
+  <%= f.input :nb_pc %>
+  <%= f.button :submit %>
+<% end %>

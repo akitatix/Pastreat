@@ -1,2 +1,12 @@
 <h1>Boulangeries#new</h1>
-<p>Find me in app/views/boulangeries/new.html.erb</p>
+
+<%= simple_form_for @boulangerie do |f| %>
+  <%= f.input :name %>
+  <%= f.input :position %>
+  <%= f.input :badge %>
+  <%= f.input :prix_cr %>
+  <%= f.input :prix_pc %>
+  <%= f.input :time_open %>
+  <%= f.input :time_close %>
+  <%= f.button :submit %>
+<% end %>

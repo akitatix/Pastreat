@@ -1,5 +1,8 @@
+require 'json'
+require 'open-uri'
 class BoulangeriesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
+  before_action :parsing_distance, only: [:show]
   def index
     @boulangeries = Boulangerie.all
   end
@@ -24,7 +27,7 @@ class BoulangeriesController < ApplicationController
   end
 
   def show
-    @boulangerie = Boulangerie.find(params[:id])
+
   end
 
   def update
@@ -42,6 +45,17 @@ class BoulangeriesController < ApplicationController
     @boulangerie = Boulangerie.find(params[:id])
     @boulangerie.destroy
     redirect_to boulangeries_path
+  end
+
+  def parsing_distance
+    @boulangerie = Boulangerie.find(params[:id])
+    @user = current_user
+    @user.location = "Bobcaygeon+ON|24+Sussex+Drive+Ottawa+ON"
+    #@user.location.parameterize('%20')
+    url = "https://maps.googleapis.com/maps/api/distancematrix/json?origins=#{@user.location}&destinations=#{@boulangerie.position}&key=AIzaSyC3NHPtUXtqe9uXK2FnPrGrd6nVt0lnmgQ"
+    resp = open(url).read
+    parsat = JSON.parse(resp)
+    @dist = parsat["rows"][0]["elements"][0]["distance"]["text"]
   end
 
   def boulangerie_params

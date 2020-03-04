@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
+      # rentrer une address
   resources :boulangeries do
     resources :reservations, only: [:new, :create]
     resources :ratings, only: [:new, :create]

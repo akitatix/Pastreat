@@ -9,34 +9,12 @@
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= stylesheet_pack_tag 'stylesheets', media: 'all', 'data-turbolinks-track': 'reload' %>
-<<<<<<< HEAD
-    <%#= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-=======
->>>>>>> 66b6aeb0c0750cd36122496d40b0f19ea9b530cb
+
   </head>
   <body>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
-<<<<<<< HEAD
-    <div class="max-w-sm rounded overflow-hidden shadow-lg">
-    <img class="w-full" src="https://www.numerama.com/content/uploads/2019/05/trou-noir-astronomie-univers-espace.jpg" alt="Sunset in the mountains">
-    <div class="px-6 py-4">
-        <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-        <p class="text-gray-700 text-base">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
-        </p>
-    </div>
-    <div class="px-6 py-4">
-        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#photography</span>
-        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#travel</span>
-        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#winter</span>
-    </div>
-    </div>
-
-    <%= yield %>
-=======
->>>>>>> 66b6aeb0c0750cd36122496d40b0f19ea9b530cb
-
+    
     <%= yield %>
     
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>

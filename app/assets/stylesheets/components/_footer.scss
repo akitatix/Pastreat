@@ -14,4 +14,13 @@
 .icon_tf .iconify {
   width: 24px;
   height: 24px;
+
+  &:active {
+    color: #50A14F;
+  }
 }
+
+.on {
+  color: #50A14F;
+}
+

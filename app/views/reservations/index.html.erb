@@ -5,3 +5,10 @@
     <div style="height: 480px" class="h-full p-6 bg-gray-400 m-8">h-full</div>
   </div>
 </div>
+<% @reservations.each do |x| %>
+  <p>-----------------------------</p>
+  <p><%= x.date %></p>
+  <p> <%= x.price %> </p>
+  <p> <%= x.nb_pc %> </p>
+  <p> <%= x.nb_cr %> </p>
+<% end %>

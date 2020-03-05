@@ -1,0 +1,15 @@
+.btngreen {
+  @apply bg-green-500 text-black  py-2 px-4   rounded-md ;
+}
+
+.btngreen:hover {
+  @apply bg-green-700;
+}
+
+.btnyellow {
+  @apply bg-yellow-500 text-black  py-2 px-4  rounded-md;
+}
+
+.btnyellow:hover {
+  @apply bg-yellow-700;
+}

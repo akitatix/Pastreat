@@ -4,4 +4,7 @@ require("channels")
 require("css/app.scss")
 
 import "bootstrap";
+
+
+import "../geolocation.js"
 import "../components/navbar.js";

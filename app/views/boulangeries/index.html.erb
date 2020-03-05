@@ -1,7 +1,7 @@
 <h1>Boulangeries#index</h1>
 <% @boulangeries.each do |x| %>
   <p>-----------------------------</p>
-  <h2><%= x.name %></h2>
+  <h2><%= x.name %> - <%= link_to "Show", boulangery_path(x)  %></h2>
   <p> <%= x.position %> </p>
   <p> <%= x.badge %> </p>
   <p> <%= x.prix_pc %> </p>

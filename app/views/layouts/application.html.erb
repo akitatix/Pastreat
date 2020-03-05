@@ -8,13 +8,16 @@
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%= stylesheet_pack_tag 'application', media: 'all' %>
     <%= stylesheet_pack_tag 'stylesheets', media: 'all', 'data-turbolinks-track': 'reload' %>
+<<<<<<< HEAD
     <%#= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+=======
+>>>>>>> 66b6aeb0c0750cd36122496d40b0f19ea9b530cb
   </head>
   <body>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
+<<<<<<< HEAD
     <div class="max-w-sm rounded overflow-hidden shadow-lg">
     <img class="w-full" src="https://www.numerama.com/content/uploads/2019/05/trou-noir-astronomie-univers-espace.jpg" alt="Sunset in the mountains">
     <div class="px-6 py-4">
@@ -31,7 +34,11 @@
     </div>
 
     <%= yield %>
+=======
+>>>>>>> 66b6aeb0c0750cd36122496d40b0f19ea9b530cb
 
-    <%= javascript_pack_tag 'application' %>
+    <%= yield %>
+    
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>
 </html>

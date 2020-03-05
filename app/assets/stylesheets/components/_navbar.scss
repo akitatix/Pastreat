@@ -1,12 +1,40 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+#navbar-img {
+  margin: 5px;
+  margin-left: 30px;
+  height: 80px;
+  width: 80px;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+#main-navbar-menu {
+  display: none;
+    &.open {
+    display: block;
+  }
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 95px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  > div {
+  display: flex;
+  border-bottom: solid 1px rgba(21, 19, 19, 0.49);
+  width: 100%;
+  padding-left: 20px;
+  padding-bottom: 0px;
+  }
 }
 
-.navbar-lewagon .navbar-brand img {
+.main-navbar-icone {
+  height: 40px;
   width: 40px;
+  margin:10px;
+}
+
+#main-navbar-menu p {
+  padding: 10px;
+  font-size: 30px;
+  font-weight: lighter;
 }

@@ -51,7 +51,7 @@ class BoulangeriesController < ApplicationController
     @boulangerie = Boulangerie.find(params[:id])
     @user = current_user
     if @user.location != nil
-      url = "https://maps.googleapis.com/maps/api/distancematrix/json?origins=#{@user.location}&destinations=#{@boulangerie.position}&key=AIzaSyC3NHPtUXtqe9uXK2FnPrGrd6nVt0lnmgQ"
+      url = "https://maps.googleapis.com/maps/api/distancematrix/json?origins=#{@user.location}&destinations=#{@boulangerie.position}&mode=walking&key=AIzaSyC3NHPtUXtqe9uXK2FnPrGrd6nVt0lnmgQ"
       resp = open(url).read
       parsat = JSON.parse(resp)
       @dist = parsat["rows"][0]["elements"][0]["distance"]["text"]

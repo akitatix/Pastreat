@@ -1,2 +1,6 @@
 <h1>Ratings#new</h1>
-<p>Find me in app/views/ratings/new.html.erb</p>
+
+<%= simple_form_for [@boulangerie, @rating] do |f| %>
+  <%= f.input :star %>
+  <%= f.button :submit %>
+<% end %>

@@ -1,8 +1,23 @@
-#navbar-img {
+#navbar-img1 {
+  display: block;
   margin: 5px;
   margin-left: 10px;
   height: 40px;
   width: 40px;
+    &.off {
+    display: none;
+  }
+}
+
+#navbar-img2 {
+  display: none;
+    &.one {
+    display: block;
+    margin: 5px;
+    margin-left: 10px;
+    height: 40px;
+    width: 40px;
+  }
 }
 
 #main-navbar-menu {
@@ -17,7 +32,7 @@
   top: 53px;
   padding-left: 20px;
   padding-right: 20px;
-  z-index: 100000;
+  z-index: 10;
 
   > div {
   display: flex;

@@ -1,5 +1,6 @@
 #navbar-img {
   margin: 5px;
+  margin-left: 30px;
   height: 50px;
   width: 50px;
 }
@@ -14,12 +15,26 @@
   height: 100%;
   position: absolute;
   top: 65px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  > div {
+  display: flex;
+  border-bottom: solid 1px rgba(21, 19, 19, 0.49);
+  width: 100%;
+  }
+}
+
+
+.main-navbar-icone {
+  height: 40px;
+  width: 40px;
+  margin:10px;
 }
 
 #main-navbar-menu p {
-  margin:5px;
-  font-size: 25px;
-  font-weight: normal;
-  border-bottom: solid 1px;
-  padding-right: 20px;
+  padding: 10px;
+  font-size: 30px;
+  font-weight: lighter;
 }
+

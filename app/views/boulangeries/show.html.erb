@@ -1,6 +1,7 @@
-
   <p>---------------------------------</p>
-  <h1> <%= @dist %></h1>
+  <% if @dist != nil %>
+    <h1> <%= @dist %></h1>
+  <% end %>
   <h2><%= @boulangerie.name %></h2>
   <p> <%= @boulangerie.position %> </p>
   <p> <%= @boulangerie.badge %> </p>
@@ -9,5 +10,4 @@
   <p> <%= @boulangerie.time_open %> </p>
   <p> <%= @boulangerie.time_close %> </p>
   <p>---------------------------------</p>
-
 

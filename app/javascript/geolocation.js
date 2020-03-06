@@ -19,6 +19,7 @@ if (document.querySelector('[data-geolocation]')) {
     },
     (error) => {
       console.log(error)
+
     },
     {
       timeout: 15000

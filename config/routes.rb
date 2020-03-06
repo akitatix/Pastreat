@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'locations/new'
+  get 'locations/create'
   devise_for :users, controllers: {
     sessions: 'users/sessions'
   }

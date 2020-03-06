@@ -1,0 +1,48 @@
+<div class="cont1">
+  <div class="flex flex-grow justify-center items-center">
+    <span class="iconify" data-icon="ant-design:crown-filled" data-inline="false"></span>
+    <h1>Ranking</h1>
+  </div>
+  <% @boul_or.each do |x| %>
+  <% @count += 1 %>
+    <div class="cardprincipal">
+      <div class="flex ">
+        <h1><%= @count %></h1>
+      </div>
+      <div class="flex flex-grow justify-around">
+        <h2><%= x.name %> - <%= link_to "Show", boulangery_path(x)  %></h2>
+      </div>
+      <div>
+        <h2> &#x1F950; 1762</h2>
+      </div>
+    </div>
+  <% end %>
+  <% @boul_ar.each do |x| %>
+  <% @count += 1 %>
+    <div class="cardprincipal">
+      <div class="flex ">
+        <h1><%= @count %></h1>
+      </div>
+      <div class="flex flex-grow justify-around">
+        <h2><%= x.name %> - <%= link_to "Show", boulangery_path(x)  %></h2>
+      </div>
+      <div>
+        <h2> &#x1F950; 1762</h2>
+      </div>
+    </div>
+  <% end %>
+  <% @boul_br.each do |x| %>
+  <% @count += 1 %>
+    <div class="cardprincipal">
+      <div class="flex ">
+        <h1><%= @count %></h1>
+      </div>
+      <div class="flex flex-grow justify-around">
+        <h2><%= x.name %> - <%= link_to "Show", boulangery_path(x)  %></h2>
+      </div>
+      <div>
+        <h2> &#x1F950; 1762</h2>
+      </div>
+    </div>
+  <% end %>
+</div>

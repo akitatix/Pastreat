@@ -1,19 +1,19 @@
-<div class="cont1">
-  <div class="flex flex-grow justify-center items-center">
-    <span class="iconify" data-icon="ant-design:crown-filled" data-inline="false"></span>
-    <h1>Ranking</h1>
-  </div>
-  <% @boulangeries.each_with_index do |x , i| %>
-    <div class="cardprincipal">
-      <div class="flex ">
-        <h1><%= i+1 %></h1>
-      </div>
-      <div class="flex flex-grow justify-around">
-        <h2><%= x.name %> - <%= link_to "Show", boulangery_path(x)  %></h2>
-      </div>
-      <div>
-        <h2> &#x1F950; 1762</h2>
+<!-- <div class="popup_adress" >
+  <p>Je suis là</p>
+  <input type="text">
+</div> -->
+<% @boulangeries.each do |x|   %>
+  <div class="bg h-full p-6 m-6 position_relative">
+    <div data-geolocation>
+      <h1 class="fin loc"></h1>
+      <p class="pos position"> <%= x.position %></p>
+      <div id="container-buttons">
+        <div class="home-buttons">Test</div>
+        <a fino href="">
+          <div class="home-buttons">GO</div>
+        </a>
       </div>
     </div>
-  <% end %>
-</div>
+    <h2 class="name"><%= x.name %></h2>
+  </div>
+<% end %>

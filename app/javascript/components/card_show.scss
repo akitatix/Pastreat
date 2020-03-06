@@ -8,8 +8,16 @@
 
 }
 
+.sbg {
+  width: 50px;
+
+}
 
 .bg {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 50vh;
   min-width: 300px;
   height: 80vh;
   margin-top: 0px;

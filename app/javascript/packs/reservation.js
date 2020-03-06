@@ -1,8 +1,10 @@
-recapitulatifElement = document.querySelector('.recapitulatif')
+recapitulatifElement = document.querySelector('.reservation_principale')
+recapitulatifElement2 = document.querySelector('.recapitulatif')
+
 
 
 const reservation = (_event) =>{
-  recapitulatifElement.classList.toggle('open');
+  recapitulatifElement2.classList.toggle('open');
 }
 
 if (recapitulatifElement) {

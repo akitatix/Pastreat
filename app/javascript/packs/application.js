@@ -5,3 +5,4 @@ require("css/app.scss")
 
 import "bootstrap";
 import "../components/navbar.js";
+import "../packs/reservation.js"

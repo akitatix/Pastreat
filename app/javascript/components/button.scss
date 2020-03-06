@@ -1,5 +1,7 @@
 .btngreen {
   @apply bg-green-500 text-black  py-2 px-4   rounded-md ;
+  width: 120px;
+  height: 60px;
 }
 
 .btngreen:hover {

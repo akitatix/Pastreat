@@ -15,3 +15,9 @@
 .btnyellow:hover {
   @apply bg-yellow-700;
 }
+.btnred {
+  @apply bg-red-500 text-black  py-2 px-4   rounded-md ;
+}
+.btnred:hover {
+  @apply bg-red-700;
+}

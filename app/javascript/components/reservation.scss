@@ -1,0 +1,26 @@
+.reservation_principale {
+position: absolute;
+width: 320px;
+height: 91px;
+left: 24px;
+top: 100px;
+border: grey solid 1px;
+border-radius: 12px;
+}
+
+.recapitulatif {
+  position: absolute;
+  width: 320px;
+  height: 91px;
+  left: 24px;
+  top: 100px;
+  border: black solid 1px;
+  border-radius: 12px;
+  margin-top: 0px;
+  background-color: grey;
+  transition: margin 0.2s ease
+
+}
+.recapitulatif.open {
+  margin-top: 70px;
+}

@@ -8,3 +8,4 @@ import "bootstrap";
 
 import "../geolocation.js"
 import "../components/navbar.js";
+import "../packs/reservation.js"

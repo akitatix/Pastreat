@@ -1,23 +1,32 @@
 .bg {
-  height: 480px;
+  min-width: 300px;
+  height: 80vh;
+  margin-top: 0px;
+  border-radius:20px;
+  object-fit: cover;
+  background-repeat: no-repeat;
   background: url("https://images.unsplash.com/photo-1534432182912-63863115e106?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
-}
-
-.name {
-  position: relative;
-  top: 375px ;
-  font-size: 24px;
-  font-weight: bold;
-  color: white;
 }
 
 .position {
   display: none;
 }
 
+.name {
+  position: absolute;
+  bottom: 100px;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
 .loc {
-  position: relative;
-  top: 385px ;
+  position: absolute;
+  bottom: 80px;
   font-size: 16px;
   color: white;
+}
+
+.position_relative {
+  position: relative;
 }

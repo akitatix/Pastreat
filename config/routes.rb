@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   }
   root to: 'pages#home'
       # rentrer une address
+  get '/ranking', to: 'boulangeries#ranking', as: :rank
   resources :boulangeries do
     resources :reservations, only: [:new, :create]
     resources :ratings, only: [:new, :create]

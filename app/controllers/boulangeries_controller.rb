@@ -6,6 +6,13 @@ class BoulangeriesController < ApplicationController
     @boulangeries = Boulangerie.all
   end
 
+  def ranking
+    @boul_or = Boulangerie.where({badge: "Or"})
+    @boul_ar = Boulangerie.where({badge: "Argent"})
+    @boul_br = Boulangerie.where({badge: "Bronze"})
+    @count = 0
+  end
+
   def new
     @boulangerie = Boulangerie.new
   end

@@ -1,3 +1,9 @@
+#main-navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+
 #navbar-img1 {
   display: block;
   margin: 5px;
@@ -7,6 +13,13 @@
     &.off {
     display: none;
   }
+}
+
+.img_prof {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin: 8px;
 }
 
 #navbar-img2 {

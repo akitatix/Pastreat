@@ -3,6 +3,9 @@
     <span id="navbar-img1" class="iconify" data-icon="openmoji:hamburger-menu" data-inline="false"></span>
     <span id="navbar-img2" class="iconify" data-icon="gridicons:cross" data-inline="false"></span>
   </button>
+  <div>
+    <img class= "img_prof" src="https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1580190984/cxtf662gx7y6toydmobc.jpg" alt="">
+  </div>
 </div>
 
 
@@ -18,9 +21,15 @@
   </div>
 
   <div>
-    <span class="main-navbar-icone iconify" data-icon="vs:clip-note-o" data-inline="false"></span>
-    <p>My Reservations</p>
+    <%= link_to reservations_path  do %>
+      <span class="main-navbar-icone iconify" data-icon="vs:clip-note-o" data-inline="false"></span>
+    <% end %>
+    <%= link_to reservations_path  do %>
+      <p>My Reservations</p>
+    <% end %>
+
   </div>
+
 
   <div>
     <span class="main-navbar-icone iconify" data-icon="bx:bx-question-mark" data-inline="false"></span>
@@ -28,8 +37,12 @@
   </div>
 
   <div>
-    <span class="main-navbar-icone iconify" data-icon="ion:log-out-outline" data-inline="false"></span>
-    <p>Log out</p>
+    <%= link_to destroy_user_session_path, method: :delete  do %>
+      <span class="main-navbar-icone iconify" data-icon="ion:log-out-outline" data-inline="false"></span>
+    <% end %>
+    <%= link_to destroy_user_session_path, method: :delete  do %>
+      <p>Log out</p>
+    <% end %>
   </div>
 
 </div>

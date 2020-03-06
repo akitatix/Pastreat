@@ -1,22 +1,11 @@
-
-  <div class="">
-    <div class="w-full h-64">
-      <div class="bg h-full p-6 m-6 ">
-        <div data-geolocation>
-          <h1 fin class="loc"></h1>
-          <p pos class="position"> <%= @boulangerie.position %> </p>
-        </div>
-        <h2 class="name"><%= @boulangerie.name %></h2>
-      </div>
-      <div class="flex justify-between h-30 m-6 mb-15">
-        <div class="btngreen">Trash</div>
-        <div class="btngreen">GO</div>
-      </div>
+<div class="bg h-full p-6 m-6 position_relative">
+  <div data-geolocation>
+    <h1 fin class="loc"></h1>
+    <p pos class="position"> <%= @boulangerie.position %></p>
+    <div id="container-buttons">
+      <div class="home-buttons">Test</div>
+      <div class="home-buttons">GO</div>
     </div>
   </div>
-
-
-
-
-
-
+  <h2 class="name"><%= @boulangerie.name %></h2>
+</div>

@@ -12,11 +12,9 @@ if (document.querySelector('[data-geolocation]')) {
         .then((data) => {
           console.log(data);
       // update dom
-          c = data["distance"]
-          const distance = document.querySelector('[fin]')
-          distance.innerHTML = c
-          console.log(c)
-          console.log("fini")
+          c = data["distance"];
+          document.querySelector('[fin]').innerHTML = c
+          document.querySelector('[fino]').href = `https://www.google.com/maps/dir/?api=1&origin=${position.coords.latitude},${position.coords.longitude}&destination=${boul_pos}&travelmode=walking`;
       });
     },
     (error) => {

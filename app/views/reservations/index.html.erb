@@ -1,9 +1,16 @@
-<h1>Reservations#index</h1>
-<p>Find me in app/views/reservations/index.html.erb</p
+
 <% @reservations.each do |x| %>
-  <p>-----------------------------</p>
-  <p><%= x.date %></p>
-  <p> <%= x.price %> </p>
-  <p> <%= x.nb_pc %> </p>
-  <p> <%= x.nb_cr %> </p>
+<div style="width: 340px; height: 200px;" class="flex">
+
+  <div class="reservation_principale">
+    <p><%= x.date %></p>
+    <p> <%= x.price %> </p>
+  </div>
+
+  <div class="recapitulatif" >
+    <p> <%= x.nb_pc %> </p>
+    <p> <%= x.nb_cr %> </p>
+  </div>
+</div>
+
 <% end %>

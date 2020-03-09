@@ -7,5 +7,9 @@
 @import "../components/reservation";
 @import "../components/card_show";
 @import "../components/form_registration";
+// Required Core Stylesheet
+@import "@glidejs/glide/src/assets/sass/glide.core";
 
+// Optional Theme Stylesheet
+@import "@glidejs/glide/src/assets/sass/glide.theme";
 

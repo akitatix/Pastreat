@@ -9,3 +9,7 @@ import "bootstrap";
 import "../geolocation.js"
 import "../components/navbar.js";
 import "../packs/reservation.js"
+
+import Glide from '@glidejs/glide';
+
+new Glide('.glide').mount();

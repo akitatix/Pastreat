@@ -6,30 +6,25 @@
 }
 
 .reservation_principale {
-  position: absolute;
   width: 320px;
-  height: 96px;
-  left: 24px;
-  top: 100px;
   border: grey solid 1px;
   border-radius: 12px;
+  margin-top: 10px;
   background-color: white;
-  z-index: 15;
+  overflow: hidden;
+
+  .main {
+    padding: 20px;
+  }
 }
 
 .recapitulatif {
-  position: absolute;
-  width: 320px;
-  height: 96px;
-  left: 24px;
-  top: 100px;
-  border: black solid 1px;
-  border-radius: 12px;
-  margin-top: 0px;
   background-color: grey;
-  transition: margin 0.2s ease
-
+  transition: max-height 0.5s ease-in-out;
+  max-height:0;
 }
 .recapitulatif.open {
-  margin-top: 70px;
+  height: auto;
+  max-height:800px;
+  transition: max-height 0.5s ease-in-out;
 }

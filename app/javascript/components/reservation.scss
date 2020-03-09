@@ -1,12 +1,20 @@
+.ordre {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+
 .reservation_principale {
-position: absolute;
-width: 320px;
-height: 96px;
-left: 24px;
-top: 100px;
-border: grey solid 1px;
-border-radius: 12px;
-background-color: white;
+  position: absolute;
+  width: 320px;
+  height: 96px;
+  left: 24px;
+  top: 100px;
+  border: grey solid 1px;
+  border-radius: 12px;
+  background-color: white;
+  z-index: 15;
 }
 
 .recapitulatif {

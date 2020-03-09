@@ -1,16 +1,17 @@
+<div class="ordre">
+  <% @reservations.each do |x| %>
+    <div style="width: 80vh; height: 200px; position: relative;" class="flex">
 
-<% @reservations.each do |x| %>
-<div style="width: 340px; height: 200px;" class="flex">
+      <div class="reservation_principale">
+        <h2><%= x.boulangerie.name  %> </h2>
+        <p><%= x.date %></p>
+        <p> <%= x.price %> </p>
+      </div>
 
-  <div class="reservation_principale">
-    <p><%= x.date %></p>
-    <p> <%= x.price %> </p>
-  </div>
-
-  <div class="recapitulatif" >
-    <p> <%= x.nb_pc %> </p>
-    <p> <%= x.nb_cr %> </p>
-  </div>
+      <div class="recapitulatif" >
+        <p> <%= x.nb_pc %> </p>
+        <p> <%= x.nb_cr %> </p>
+      </div>
+    </div>
+  <% end %>
 </div>
-
-<% end %>

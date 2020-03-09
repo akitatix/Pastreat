@@ -1,16 +1,21 @@
-
 .popup_adress {
   position: fixed;
   top: 40vh;
   left: 15vh;
   background-color: white;
   padding: 20px;
-
 }
+
+#logo-img {
+  height: 50px;
+  width: 50px;
+  margin: 8px;
+}
+
+
 
 .sbg {
   width: 50px;
-
 }
 
 .header {
@@ -31,8 +36,6 @@
   object-fit: cover;
   background-repeat: no-repeat;
   background: url("https://images.unsplash.com/photo-1534432182912-63863115e106?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
-  background: rgb(255,255,255);
-background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%);
 }
 
 .position {

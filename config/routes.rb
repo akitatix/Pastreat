@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {
     sessions: 'users/sessions'
   }
-  root to: 'pages#home'
+  root to: 'boulangeries#index'
       # rentrer une address
   get '/ranking', to: 'boulangeries#ranking', as: :rank
   resources :boulangeries do

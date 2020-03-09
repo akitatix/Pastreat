@@ -7,7 +7,9 @@
             <h1 class="fin loc"></h1>
             <p class="pos position"> <%= x.position %></p>
             <div id="container-buttons">
-              <div class="home-buttons">Test</div>
+              <%= link_to new_boulangery_reservation_path(x) do %>
+                <div class="home-buttons">Reserver</div>
+              <% end %>
               <a fino href="">
                 <div class="home-buttons">GO</div>
               </a>

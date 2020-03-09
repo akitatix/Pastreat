@@ -3,9 +3,7 @@
   <input type="text">
 </div> -->
 <div class="header">
-  <h1>BOULANGERIE PROCHE !</h1>
-</div>
-<% @boulangeries.each do |x|   %>
+    <% @boulangeries.each do |x|   %>
   <div class="bg h-full p-6 m-6 position_relative">
     <div data-geolocation>
       <h1 class="fin loc"></h1>
@@ -13,10 +11,11 @@
       <div id="container-buttons">
         <div class="home-buttons">Test</div>
         <a fino href="">
-          <div class="home-buttons">GO</div>
+        <div class="home-buttons">GO</div>
         </a>
       </div>
     </div>
     <h2 class="name"><%= x.name %></h2>
   </div>
+</div>
 <% end %>

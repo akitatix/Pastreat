@@ -1,6 +1,5 @@
 if (document.querySelector('[data-geolocation]')) {
   console.log('hello')
-  throw "une erreur";
   navigator.geolocation.getCurrentPosition(
     (position) =>  {
       console.log(position.coords.latitude, position.coords.longitude);

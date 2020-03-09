@@ -1,12 +1,10 @@
-recapitulatifElement = document.querySelector('.reservation_principale')
-recapitulatifElement2 = document.querySelector('.recapitulatif')
+recapitulatifElements = document.querySelectorAll('.reservation_principale')
+// recapitulatifElement2 = document.querySelector('.recapitulatif')
 
-
-
-const reservation = (_event) =>{
-  recapitulatifElement2.classList.toggle('open');
+const reservation = (event) =>{
+  event.currentTarget.querySelector('.recapitulatif').classList.toggle('open');
 }
 
-if (recapitulatifElement) {
+recapitulatifElements.forEach((recapitulatifElement) => {
   recapitulatifElement.addEventListener('click', reservation)
-}
+})

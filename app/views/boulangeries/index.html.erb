@@ -1,21 +1,23 @@
-<!-- <div class="popup_adress" >
-  <p>Je suis là</p>
-  <input type="text">
-</div> -->
-<div class="header">
-    <% @boulangeries.each do |x|   %>
-  <div class="bg h-full p-6 m-6 position_relative">
-    <div data-geolocation>
-      <h1 class="fin loc"></h1>
-      <p class="pos position"> <%= x.position %></p>
-      <div id="container-buttons">
-        <div class="home-buttons">Test</div>
-        <a fino href="">
-        <div class="home-buttons">GO</div>
-        </a>
-      </div>
-    </div>
-    <h2 class="name"><%= x.name %></h2>
+<div class="glide">
+  <div class="glide__track" data-glide-el="track">
+    <ul class="glide__slides">
+      <% @boulangeries.each do |x|   %>
+        <li class="bg h-full p-6 m-6 position_relative">
+          <div data-geolocation>
+            <h1 class="fin loc"></h1>
+            <p class="pos position"> <%= x.position %></p>
+            <div id="container-buttons">
+              <div class="home-buttons">Test</div>
+              <a fino href="">
+                <div class="home-buttons">GO</div>
+              </a>
+            </div>
+          </div>
+          <h2 class="name"><%= x.name %></h2>
+        </li>
+      <% end %>
+    </ul>
   </div>
 </div>
-<% end %>
+
+

@@ -1,12 +1,12 @@
 if (document.querySelector('[data-geolocation]')) {
   console.log('hello')
-
   navigator.geolocation.getCurrentPosition(
     (position) =>  {
       console.log(position.coords.latitude, position.coords.longitude);
       document.querySelectorAll('[data-geolocation]').forEach((element) => {
         const pos = element.querySelector('.pos')
         const boul_pos = pos.innerHTML.replace(/\s/g, '')
+
         console.log(boul_pos)
       // fetch
       // fetch(`https://maps.googleapis.com/maps/api/distancematrix/json?origins=${position.coords.latitude},${position.coords.longitude}&destinations=${boul_pos}&mode=walking&key=AIzaSyC3NHPtUXtqe9uXK2FnPrGrd6nVt0lnmgQ`)
@@ -28,7 +28,7 @@ if (document.querySelector('[data-geolocation]')) {
     },
     (error) => {
       console.log(error)
-      const blop = prompt("Please enter your address:", "Chez ta mère");
+      const blop = prompt("Please enter your address:", "40 Rue Louis Braille");
       const replace = blop.split(' ').join('+');
       document.querySelectorAll('[data-geolocation]').forEach((element) => {
         const pos = element.querySelector('.pos')
@@ -42,12 +42,12 @@ if (document.querySelector('[data-geolocation]')) {
           // update dom
               c = data["distance"];
               element.querySelector('.fin').innerHTML = c
-              element.querySelector('[fino]').href = `https://www.google.com/maps/dir/?api=1&origin=${position.coords.latitude},${position.coords.longitude}&destination=${boul_pos}&travelmode=walking`;
+              element.querySelector('[fino]').href = `https://www.google.com/maps/dir/?api=1&origin=${replace}&destination=${boul_pos}&travelmode=walking`;
 
         });
       });
     },
     {
-      timeout: 1  }
+      timeout: 15000  }
   );
 }

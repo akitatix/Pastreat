@@ -1,5 +1,5 @@
 if (document.querySelector('[data-geolocation]')) {
-  console.log('hello')
+  // console.log('hello')
   navigator.geolocation.getCurrentPosition(
     (position) =>  {
       console.log(position.coords.latitude, position.coords.longitude);
@@ -22,6 +22,7 @@ if (document.querySelector('[data-geolocation]')) {
       });
     },
     (error) => {
+      console.log('dfsfds')
       console.log(error)
 
     },

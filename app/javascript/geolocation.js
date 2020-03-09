@@ -9,7 +9,12 @@ if (document.querySelector('[data-geolocation]')) {
         console.log(boul_pos)
       // fetch
       // fetch(`https://maps.googleapis.com/maps/api/distancematrix/json?origins=${position.coords.latitude},${position.coords.longitude}&destinations=${boul_pos}&mode=walking&key=AIzaSyC3NHPtUXtqe9uXK2FnPrGrd6nVt0lnmgQ`)
-        fetch(`/toto?origins=${position.coords.latitude},${position.coords.longitude}&destinations=${boul_pos}`)
+        fetch(`/toto?origins=${position.coords.latitude},${position.coords.longitude}&destinations=${boul_pos}`, {
+          headers : {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+           }
+        })
           .then(response => response.json())
           .then((data) => {
             console.log(data);

@@ -13,9 +13,11 @@
 
 <div id="ecran-splite">
 
+  <%= link_to reservations_path  do %>
   <div class="div-ecran-splite" style="background-color: #ffc800">
     <h2>Finaliser ma commande</h2>
   </div>
+  <% end %>
 
   <style>
   html {
@@ -25,7 +27,7 @@
 
     <a href="#titre-resa-pain">
   <div class="div-ecran-splite" style="background-color: #6a7ced">
-    <h2>Ajouter des pains au chocolat ? 🍫</h2>
+    <h2>Sélectionner des pains au chocolat ? 🍫</h2>
     </a>
 
     <style>
@@ -48,12 +50,14 @@
   <div class="div-choix" style="background-color: #5b0909">J'en veux plus 🍫🍫🍫🍫</div>
 </div>
 
-<%= simple_form_for [@boulangerie, @reservation] do |f| %>
+<div id="checkout-order">
 
+  <%= simple_form_for [@boulangerie, @reservation] do |f| %>
   <%= f.input :date %>
   <%= f.input :price %>
   <%= f.input :nb_cr %>
   <%= f.input :nb_pc %>
   <%= f.button :submit %>
-<% end %>
+  <% end %>
 
+</div>

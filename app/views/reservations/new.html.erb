@@ -33,3 +33,84 @@
   <%= f.input :nb_pc %>
   <%= f.button :submit %>
 <% end %>
+
+<h1 id="titre-resa">Entrez les informations de votre réservation ! 😋</h1>
+
+<div id="formulaire-resa">
+  <p>Combien de croissants souhaitez vous réserver ? 🥐</p>
+  <div id="un-croissant">Un croissant 🥐</div>
+  <div id="deux-croissants">Deux croissants !! 🥐🥐</div>
+  <div id="trois-croissants">Trois croissants !! 🥐🥐🥐</div>
+  <div id="plus-croissants">J'en veux plus !!!! 🥐🥐🥐🥐</div>
+
+    <p>Combien de pains au cholocat souhaitez-vous réserver ? 🍫</p>
+
+    <input type="radio" id="un pain" name="pain-resa" value="un pain">
+    <label for="Un pain au chocolat !"> Un pain au chocolat !</label><br>
+
+    <input type="radio" id="2 pains" name="pain-resa" value="2 pains">
+    <label for="Deux pains au chocolat !"> Deux pains au chocolat !</label><br>
+
+    <input type="radio" id="3 pains ! " name="pain-resa" value="3 pains !">
+    <label for="Trois pains au chocolat !">Trois pains au chocolat !</label><br>
+
+    <input type="radio" id="4 croissants ! " name="pain-resa" value="4 croissants !">
+    <label for="J'en veux plus ">J'en veux plus !</label>
+    <input type="number" id="plus-croissants" name="pain-resa" min="4" max="20" placeholder="4+..">
+  </form>
+
+</div>
+
+<%= simple_form_for [@boulangerie, @reservation] do |f| %>
+
+  <%= f.input :date %>    <%= f.input :date %>
+  <%= f.input :price %>   <%= f.input :price %>
+  <%= f.input :nb_cr %>   <%= f.input :nb_cr %>
+
+#titre-resa {
+  margin: 10px;
+}
+
+#un-croissant {
+  width: 100%;
+  height: 10vh;
+  color: white;
+  font-size: 35px;
+  background-color: #ffd369;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#deux-croissants {
+  width: 100%;
+  height: 10vh;
+  color: white;
+  font-size: 35px;
+  background-color: #e26241;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+#trois-croissants {
+  width: 100%;
+  height: 10vh;
+  color: white;
+  font-size: 35px;
+  background-color: #940a37;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+  #plus-croissants {
+  width: 100%;
+  height: 10vh;
+  color: white;
+  font-size: 35px;
+  background-color: #5b0909;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }

@@ -7,11 +7,9 @@ class Boulangerie < ApplicationRecord
   end
 
   def open?
-    open = time_open.hour + (time_open.min * 0.1)
-    close = time_close.hour + (time_close.min * 0.1)
-    time = Time.now.hour + (Time.now.min * 0.1)
-    p open
-    p close
+    open = time_open.hour + 1 + (time_open.min * 0.01)
+    close = time_close.hour + 1 + (time_close.min * 0.01)
+    time = Time.now.hour + (Time.now.min * 0.01)
     if time > open && time < close
       true
     else

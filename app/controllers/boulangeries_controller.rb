@@ -7,6 +7,11 @@ class BoulangeriesController < ApplicationController
     @boulangeries = Boulangerie.all
   end
 
+  def indexGeo
+    @boulangeries = Boulangerie.all
+    render json: { distance: @dist }
+  end
+
   def ranking
     @boul_or = Boulangerie.where({badge: "Or"})
     @boul_ar = Boulangerie.where({badge: "Argent"})

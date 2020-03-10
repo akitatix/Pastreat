@@ -15,6 +15,16 @@
               </a>
             </div>
           </div>
+          <div class="badge">
+            <% if x.badge == "Or" %>
+              <span class="iconify" data-icon="vaadin:medal" data-inline="false" style="color: gold;"></span>
+            <% elsif x.badge == "Argent" %>
+              <span class="iconify" data-icon="vaadin:medal" data-inline="false" style="color: silver;"></span>
+            <% else %>
+              <span class="iconify" data-icon="vaadin:medal" data-inline="false" style="color: rgb(131, 74, 28);"></span>
+            <% end %>
+          </div>
+          <h2> <%= x.average_rating %></h2>
           <h2 class="name"><%= x.name %></h2>
         </li>
       <% end %>

@@ -31,6 +31,7 @@ if (document.querySelector('[data-geolocation]')) {
                       console.log(document.querySelectorAll('.name')[counter])
                       document.querySelectorAll('.name')[counter].innerHTML = `${blabla.name}`
                       document.querySelectorAll('.fin')[counter].innerHTML = `${blabla.dist}`
+                      document.querySelectorAll('[fino]')[counter].href = `https://www.google.com/maps/dir/?api=1&origin=${position.coords.latitude},${position.coords.longitude}&destination=${blabla["position"]}&travelmode=walking`;
                       counter = counter + 1
                     })
 
@@ -92,6 +93,7 @@ if (document.querySelector('[data-geolocation]')) {
                       console.log(document.querySelectorAll('.name')[counter])
                       document.querySelectorAll('.name')[counter].innerHTML = `${blabla.name}`
                       document.querySelectorAll('.fin')[counter].innerHTML = `${blabla.dist}`
+                      document.querySelectorAll('[fino]')[counter].href = `https://www.google.com/maps/dir/?api=1&origin=${position.coords.latitude},${position.coords.longitude}&destination=${blabla["position"]}&travelmode=walking`;
                       counter = counter + 1
                     })
 

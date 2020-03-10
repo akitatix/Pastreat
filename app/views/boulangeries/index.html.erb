@@ -2,31 +2,33 @@
   <div class="glide__track" data-glide-el="track">
     <ul class="glide__slides">
       <% @boulangeries.each do |x|   %>
-        <li class="bg h-full position_relative">
-          <div data-geolocation>
-            <h1 class="fin loc"></h1>
-            <p class="pos position"> <%= x.position %></p>
-            <div id="container-buttons">
-              <%= link_to new_boulangery_reservation_path(x) do %>
-                <div class="home-buttons">Reserver</div>
-              <% end %>
-              <a fino href="">
-                <div class="home-buttons">GO</div>
-              </a>
+        <% if x.open? %>
+          <li class="bg h-full position_relative">
+            <div data-geolocation>
+              <h1 class="fin loc"></h1>
+              <p class="pos position"> <%= x.position %></p>
+              <div id="container-buttons">
+                <%= link_to new_boulangery_reservation_path(x) do %>
+                  <div class="home-buttons">Reserver</div>
+                <% end %>
+                <a fino href="">
+                  <div class="home-buttons">GO</div>
+                </a>
+              </div>
             </div>
-          </div>
-          <div class="badge">
-            <% if x.badge == "Or" %>
-              <span class="iconify" data-icon="vaadin:medal" data-inline="false" style="color: gold;"></span>
-            <% elsif x.badge == "Argent" %>
-              <span class="iconify" data-icon="vaadin:medal" data-inline="false" style="color: silver;"></span>
-            <% else %>
-              <span class="iconify" data-icon="vaadin:medal" data-inline="false" style="color: rgb(131, 74, 28);"></span>
-            <% end %>
-          </div>
-          <h2> <%= x.average_rating %></h2>
-          <h2 class="name"><%= x.name %></h2>
-        </li>
+            <div class="badge">
+              <% if x.badge == "Or" %>
+                <span class="iconify" data-icon="vaadin:medal" data-inline="false" style="color: gold;"></span>
+              <% elsif x.badge == "Argent" %>
+                <span class="iconify" data-icon="vaadin:medal" data-inline="false" style="color: silver;"></span>
+              <% else %>
+                <span class="iconify" data-icon="vaadin:medal" data-inline="false" style="color: rgb(131, 74, 28);"></span>
+              <% end %>
+            </div>
+            <h2> <%= x.average_rating %></h2>
+            <h2 class="name"><%= x.name %></h2>
+          </li>
+        <% end %>
       <% end %>
     </ul>
   </div>

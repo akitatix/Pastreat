@@ -1,5 +1,4 @@
 <div class="ordre">
-  <h2>Test</h2>
   <div>
     <% @reservations.each do |x| %>
 
@@ -8,11 +7,12 @@
           <h2><%= x.boulangerie.name  %> </h2>
           <p><%= x.date %></p>
           <p> <%= x.price %> </p>
+          <p> <%= x.nb_pc %> pain(s) au chocolat </p>
+          <p> <%= x.nb_cr %> croissant(s) </p>
         </div>
 
         <div class="recapitulatif" >
-          <p> <%= x.nb_pc %> </p>
-          <p> <%= x.nb_cr %> </p>
+
         </div>
       </div>
     <% end %>

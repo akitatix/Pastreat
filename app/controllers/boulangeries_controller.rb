@@ -66,4 +66,12 @@ class BoulangeriesController < ApplicationController
     params.require(:boulangerie).permit(:name, :position, :badge, :prix_pc, :prix_cr, :time_open, :time_close)
   end
 
+  def scoring(array)
+    it = 0
+    array.each do |x|
+      it += x
+    end
+    it = it / it.length
+  end
+
 end

@@ -1,5 +1,6 @@
 .cardprincipal{
-  @apply flex-grow h-8 m-1 p-2 items-center border border-solid border-black rounded flex justify-between
+  @apply flex-grow h-8 m-1 items-center border border-solid border-black rounded flex justify-between;
+  padding: 2.5rem;
 }
 .cont1 {
   max-width: 500px;

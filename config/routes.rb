@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   get '/toto', to: 'boulangeries#toto'
 
+  get '/indexGeo', to: 'boulangeries#indexGeo'
+
   resources :reservations, only: [:index]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

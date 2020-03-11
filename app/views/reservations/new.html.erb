@@ -1,59 +1,45 @@
 <div class="titre-resa">
   <h1>Entrez les informations de votre réservation ! 😋</h1>
-  <p>Combien de 🥐souhaitez vous réserver ? </p>
 </div>
 
+<div id="form-select">
 
-<div class="formulaire-resa">
-  <div class="div-choix" style="background-color: #b80d57">Un croissant 🥐</div>
-  <div class="div-choix" style="background-color: #f8615a">Deux croissants 🥐🥐</div>
-  <div class="div-choix" style="background-color: #ffd868">Trois croissants 🥐🥐🥐</div>
-  <div class="div-choix" style="background-color: #5b0909">J'en veux plus (4🥐 et +)</div>
+  <p>Combien de 🥐 souhaitez vous réserver ? </p><br>
+
+  <form action="/boulangeries/<%= @boulangerie.id %>/reservations" method="POST">
+    <input type="radio" id="1" name="nb_cr" value="1">
+    <label for="1">1 croissant</label><br>
+
+    <input type="radio" id="2" name="nb_cr" value="2">
+    <label for="2">2 croissants</label><br>
+
+    <input type="radio" id="3" name="nb_cr" value="3">
+    <label for="3">3 croissants</label><br><br>
+
+    <p>Combien de pain(s) au 🍫 souhaitez vous réserver ? </p><br>
+
+    <input type="radio" id="1" name="nb_pc" value="1">
+    <label for="1">1 pain au chocolat</label><br>
+
+    <input type="radio" id="2" name="nb_pc" value="2">
+    <label for="2">2 pains au chocolat</label><br>
+
+    <input type="radio" id="3" name="nb_pc" value="3">
+    <label for="3">3 pains au chocolat</label><br><br>
+
+    <!--  <input type="number" id="4" name="nb_cr">
+    <label for="4">Plus de 4 croissants ?</label> -->
+
+    <input type="submit" value="Valider la réservation ! ">
+  </form>
+
 </div>
 
-<div id="ecran-splite">
-
-  <div class="div-ecran-splite" style="background-color: #ffc800">
-    <h2>Finaliser ma commande</h2>
-  </div>
-
-  <style>
-  html {
-  scroll-behavior: smooth;
-  }
-  </style>
-
-    <a href="#titre-resa-pain">
-  <div class="div-ecran-splite" style="background-color: #6a7ced">
-    <h2>Ajouter des pains au chocolat ? 🍫</h2>
-    </a>
-
-    <style>
-    html {
-    scroll-behavior: smooth;
-    }
-    </style>
-
-  </div>
-</div>
-
-<div id="titre-resa-pain">
-  <h1>Pains au chocolat ! 😋</h1>
-  <p>Combien de pains au 🍫 souhaitez-vous réserver ?</p>
-</div>
-
-  <div class="div-choix" style="background-color: #b80d57">Un pain ! 🍫</div>
-  <div class="div-choix" style="background-color: #f8615a">Deux pains ! 🍫🍫</div>
-  <div class="div-choix" style="background-color: #ffd868">Trois pains 🍫🍫🍫</div>
-  <div class="div-choix" style="background-color: #5b0909">J'en veux plus 🍫🍫🍫🍫</div>
-</div>
-
-<%= simple_form_for [@boulangerie, @reservation] do |f| %>
-
-  <%= f.input :date %>
-  <%= f.input :price %>
+<!-- <%= simple_form_for [@boulangerie, @reservation] do |f| %>
+<%= f.input :date %>
   <%= f.input :nb_cr %>
   <%= f.input :nb_pc %>
   <%= f.button :submit %>
 <% end %>
 
+ -->

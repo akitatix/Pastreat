@@ -1,4 +1,6 @@
 class ReservationsController < ApplicationController
+  skip_before_action :verify_authenticity_token, only: [:create]
+
   def index
     @reservations = Reservation.all
   end
@@ -10,7 +12,7 @@ class ReservationsController < ApplicationController
 
   def create
     @boulangerie = Boulangerie.find(params[:boulangery_id])
-    @reservation = Reservation.new(reservation_params)
+    @reservation = Reservation.new(boulangerie: @boulangerie, nb_cr: params[:nb_cr])
     @reservation.user = current_user
     @reservation.boulangerie = @boulangerie
     @reservation.save
@@ -23,7 +25,7 @@ class ReservationsController < ApplicationController
 
   end
 
-  def reservation_params
-    params.require(:reservation).permit(:date, :price, :nb_pc, :nb_cr)
-  end
+  # def reservation_params
+  #   params.require(:reservation).permit(:date, :price, :nb_pc, :nb_cr)
+  # end
 end

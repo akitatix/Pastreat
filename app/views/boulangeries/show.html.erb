@@ -1,3 +1,7 @@
+<% content_for :meta_title, "#{@boulangerie.name} is on #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_description, @boulangerie.description %>
+<% content_for :meta_image, cl_image_path(@boulangerie.photo.path) %>
+
 <div class="popup_adress" >
   <p>Je suis là</p>
   <input type="text">

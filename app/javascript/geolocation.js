@@ -50,10 +50,9 @@ if (document.querySelector('[data-geolocation]')) {
 
                       counter = counter + 1
                     })
-                    new Glide('.glide').mount();
-
                   });
               })
+              new Glide('.glide').mount();
             });
       // document.querySelectorAll('[data-geolocation]').forEach((element) => {
       //   const pos = element.querySelector('.pos')

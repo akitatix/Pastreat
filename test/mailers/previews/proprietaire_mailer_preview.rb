@@ -3,7 +3,7 @@ class ProprietaireMailerPreview < ActionMailer::Preview
 
   # Preview this email at http://localhost:3000/rails/mailers/proprietaire_mailer/reservation
   def reservation
-    ProprietaireMailer.reservation
+    proprietaire = Proprietaire.first
+    ProprietaireMailer.reservation(proprietaire)
   end
-
 end

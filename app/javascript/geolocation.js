@@ -34,7 +34,9 @@ if (document.querySelector('[data-geolocation]')) {
                       document.querySelectorAll('.name')[counter].innerHTML = `${blabla.name}`
                       document.querySelectorAll('.fin')[counter].innerHTML = `${blabla.dist}`
                       document.querySelectorAll('[fino]')[counter].href = `https://www.google.com/maps/dir/?api=1&origin=${position.coords.latitude},${position.coords.longitude}&destination=${blabla["position"]}&travelmode=walking`;
-                      document.querySelectorAll('[reserv]')[counter].href = `/boulangeries/${blabla.id}/reservations/new`
+                      if (document.querySelector('.home-buttons_reserved')) {
+                        document.querySelectorAll('[reserv]')[counter].href = `/boulangeries/${blabla.id}/reservations/new`
+                      }
                       if ( blabla.badge === "Or" ) {
                         document.querySelectorAll('.badge')[counter].innerHTML = `<span class="iconify" data-icon="vaadin:medal" data-inline="false" style="color: gold;"></span>`
                       } if (blabla.badge === "Argent") {

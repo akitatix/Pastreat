@@ -9,7 +9,7 @@ class BoulangeriesController < ApplicationController
 
   def indexGeo
     @boulangeries = Boulangerie.all
-    render json: { distance: @dist }
+    render json: { boulangeries: @boulangeries }
   end
 
   def ranking

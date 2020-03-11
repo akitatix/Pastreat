@@ -7,13 +7,7 @@ class Boulangerie < ApplicationRecord
   end
 
   def open?
-    open = time_open.hour + 1 + (time_open.min * 0.01)
-    close = time_close.hour + 1 + (time_close.min * 0.01)
-    time = Time.now.hour + (Time.now.min * 0.01)
-    if time > open && time < close
-      true
-    else
-      false
-    end
+    time_now_str = Time.now.utc.strftime('%H:%M')
+    time_now_str > time_open.strftime('%H:%M') && time_now_str < time_close.strftime('%H:%M')
   end
 end

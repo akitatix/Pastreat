@@ -7,8 +7,10 @@
               <h1 class="fin loc"></h1>
               <p class="pos position"> <%= x.position %></p>
               <div id="container-buttons">
-                <%= link_to new_boulangery_reservation_path(x) do %>
-                  <div class="home-buttons_reserved">Reserver</div>
+                <% if user_signed_in? %>
+                  <%= link_to new_boulangery_reservation_path(x) do %>
+                    <div class="home-buttons_reserved">Reserver</div>
+                  <% end %>
                 <% end %>
                 <a fino href="">
                   <div class="home-buttons_go">GO</div>

@@ -1,3 +1,5 @@
+import Glide from '@glidejs/glide';
+
 if (document.querySelector('[data-geolocation]')) {
   // console.log('hello')
   navigator.geolocation.getCurrentPosition(
@@ -23,7 +25,7 @@ if (document.querySelector('[data-geolocation]')) {
                     ind.push(boulangerie)
                     ind.sort((a, b) => parseFloat(a.dist.split(' ')[0]) - parseFloat(b.dist.split(' ')[0])) ;
                     console.log(ind)
-                    counter = 0
+                    let counter = 0
                     ind.forEach((blabla) => {
                       console.log("---------------------------")
                       console.log(blabla.name)
@@ -34,7 +36,10 @@ if (document.querySelector('[data-geolocation]')) {
                       document.querySelectorAll('.name')[counter].innerHTML = `${blabla.name}`
                       document.querySelectorAll('.fin')[counter].innerHTML = `${blabla.dist}`
                       document.querySelectorAll('[fino]')[counter].href = `https://www.google.com/maps/dir/?api=1&origin=${position.coords.latitude},${position.coords.longitude}&destination=${blabla["position"]}&travelmode=walking`;
-                      document.querySelectorAll('[reserv]')[counter].href = `/boulangeries/${blabla.id}/reservations/new`
+                      document.querySelectorAll('.bg')[counter].style = `background: url(${blabla.image});`
+                      if (document.querySelectorAll('home-buttons_reserve')) {
+                        document.querySelectorAll('[reserv]')[counter].href = `/boulangeries/${blabla.id}/reservations/new`
+                      }
                       if ( blabla.badge === "Or" ) {
                         document.querySelectorAll('.badge')[counter].innerHTML = `<span class="iconify" data-icon="vaadin:medal" data-inline="false" style="color: gold;"></span>`
                       } if (blabla.badge === "Argent") {
@@ -45,6 +50,7 @@ if (document.querySelector('[data-geolocation]')) {
 
                       counter = counter + 1
                     })
+                    new Glide('.glide').mount();
 
                   });
               })

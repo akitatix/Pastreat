@@ -12,13 +12,28 @@
 </div>
 
 <div id="ecran-splite">
+
   <div class="div-ecran-splite" style="background-color: #ffc800">
     <h2>Finaliser ma commande</h2>
   </div>
-  <a href="#titre-resa-pain">
-    <div class="div-ecran-splite" style="background-color: #6a7ced">
+
+  <style>
+  html {
+  scroll-behavior: smooth;
+  }
+  </style>
+
+    <a href="#titre-resa-pain">
+  <div class="div-ecran-splite" style="background-color: #6a7ced">
     <h2>Ajouter des pains au chocolat ? 🍫</h2>
-  </a>
+    </a>
+
+    <style>
+    html {
+    scroll-behavior: smooth;
+    }
+    </style>
+
   </div>
 </div>
 
@@ -31,10 +46,6 @@
   <div class="div-choix" style="background-color: #f8615a">Deux pains ! 🍫🍫</div>
   <div class="div-choix" style="background-color: #ffd868">Trois pains 🍫🍫🍫</div>
   <div class="div-choix" style="background-color: #5b0909">J'en veux plus 🍫🍫🍫🍫</div>
-</div>
-
-<div id="checkout">
-
 </div>
 
 <%= simple_form_for [@boulangerie, @reservation] do |f| %>

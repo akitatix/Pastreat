@@ -32,7 +32,6 @@
   min-width: 300px;
   height: 80vh;
   margin-top: 0px;
-  border-radius:20px;
   object-fit: cover;
   background-repeat: no-repeat;
   background: url("https://images.unsplash.com/photo-1534432182912-63863115e106?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
@@ -45,20 +44,33 @@
 .name {
   position: absolute;
   bottom: 100px;
-  font-size: 24px;
+  font-size: 40px;
   font-weight: bold;
-  color: white;
+  color: black;
+  top: 20px;
+  left: 20px;
+  white-space: normal;
 }
 
 .loc {
   position: absolute;
   bottom: 80px;
-  font-size: 16px;
-  color: white;
+  font-size: 32px;
+  color: black;
   transform: translateX(-50%);
-  left: 50%;
+  left: 65px;
+
 }
 
 .position_relative {
   position: relative;
 }
+*{
+  border:1px solid red;
+}
+.names{
+  word-wrap: break-word;
+}
+// .glide__track{
+//   background: linear-gradient(to bottom, blue, white);
+// }

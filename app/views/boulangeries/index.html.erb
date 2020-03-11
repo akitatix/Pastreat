@@ -2,17 +2,16 @@
   <div class="glide__track" data-glide-el="track">
     <ul class="glide__slides">
       <% @boulangeries.each do |x|   %>
-        <% if x.open? %>
           <li class="bg h-full position_relative">
             <div data-geolocation>
               <h1 class="fin loc"></h1>
               <p class="pos position"> <%= x.position %></p>
               <div id="container-buttons">
                 <%= link_to new_boulangery_reservation_path(x) do %>
-                  <div class="home-buttons">Reserver</div>
+                  <div class="home-buttons_reserved">Reserver</div>
                 <% end %>
                 <a fino href="">
-                  <div class="home-buttons">GO</div>
+                  <div class="home-buttons_go">GO</div>
                 </a>
               </div>
             </div>
@@ -26,9 +25,10 @@
               <% end %>
             </div>
             <h2> <%= x.average_rating %></h2>
-            <h2 class="name"></h2>
+            <div class="names">
+              <h2 class="name"></h2>
+            </div>
           </li>
-        <% end %>
       <% end %>
     </ul>
   </div>

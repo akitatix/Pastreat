@@ -5,9 +5,11 @@ class ProprietaireMailer < ApplicationMailer
   #
   #   en.proprietaire_mailer.reservation.subject
   #
-  def reservation
+  def reservation(proprietaire)
+    @proprietaire = proprietaire
+
     @greeting = "Hi"
 
-    mail(to: @proprietaire.email, subject: 'Nouvelle réservation !')
+    mail(to: @proprietaire.email, subject: 'Pastreat: une nouvelle réservation !')
   end
 end

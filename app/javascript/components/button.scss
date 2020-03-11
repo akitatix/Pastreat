@@ -12,17 +12,26 @@
 
 }
 
-.home-buttons {
+.home-buttons_go {
   height: 60px;
   width: 120px;
-  background-color: #ffffff;
-  opacity: 0.6;
+  background-color: #2ECA7E;
+  opacity: 0.85;
   color: black;
   padding: 15px;
-  border: 4px solid white;
+  border: 2px solid white;
   text-align: center;
 }
-
+.home-buttons_reserved{
+  height: 60px;
+  width: 120px;
+  background-color: #F18F01;
+  opacity: 0.85;
+  color: black;
+  padding: 15px;
+  border: 2px solid white;
+  text-align: center;
+}
 
 .btngreen {
   @apply bg-green-500 text-black  py-2 px-4   rounded-md;

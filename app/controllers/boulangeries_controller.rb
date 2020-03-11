@@ -1,8 +1,8 @@
 require 'json'
 require 'open-uri'
 class BoulangeriesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :toto]
-  skip_before_action :verify_authenticity_token, only: [:create]
+ skip_before_action :verify_authenticity_token, only: [:create]
+ skip_before_action :authenticate_user!, only: [:index, :toto, :indexGeo]
 
   def index
     @boulangeries = Boulangerie.all
@@ -10,7 +10,7 @@ class BoulangeriesController < ApplicationController
 
   def indexGeo
     @boulangeries = Boulangerie.all
-    render json: { distance: @dist }
+    render json: { boulangeries: @boulangeries }
   end
 
   def ranking

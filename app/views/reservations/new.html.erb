@@ -7,6 +7,11 @@
   <p>Combien de 🥐 souhaitez vous réserver ? </p><br>
 
   <form action="/boulangeries/<%= @boulangerie.id %>/reservations" method="POST">
+
+    <input type="radio" id="0" name="nb_cr" value="0" checked>
+    <label class="container" for="0">0 croissant</label><br>
+    <span class="checkmark"></span>
+
     <input type="radio" id="1" name="nb_cr" value="1">
     <label for="1">1 croissant</label><br>
 
@@ -14,9 +19,18 @@
     <label for="2">2 croissants</label><br>
 
     <input type="radio" id="3" name="nb_cr" value="3">
-    <label for="3">3 croissants</label><br><br>
+    <label for="3">3 croissants</label><br>
 
-    <p>Combien de pain(s) au 🍫 souhaitez vous réserver ? </p><br>
+    <input type="radio" id="4" name="nb_cr" value="4">
+    <label for="4">4 croissants ou plus</label>
+    <input type="number" id="4" name="nb_cr" value="4 ou plus !"><br>
+
+    <br>
+    <br>
+
+    <p>Combien de pain(s) au 🍫 souhaitez-vous réserver ? </p><br>
+    <input type="radio" id="0" name="nb_pc" value="0" checked>
+    <label for="0">0 pain au chocolat</label><br>
 
     <input type="radio" id="1" name="nb_pc" value="1">
     <label for="1">1 pain au chocolat</label><br>
@@ -25,8 +39,14 @@
     <label for="2">2 pains au chocolat</label><br>
 
     <input type="radio" id="3" name="nb_pc" value="3">
-    <label for="3">3 pains au chocolat</label><br><br>
+    <label for="3">3 pains au chocolat</label><br>
 
+    <input type="radio" id="4" name="nb_cr" value="4">
+    <label for="4">4 pains au 🍫 ou plus</label>
+    <input type="number" id="4" name="nb_cr" value="4 ou plus !">
+
+    <br>
+    <br>
     <!--  <input type="number" id="4" name="nb_cr">
     <label for="4">Plus de 4 croissants ?</label> -->
 

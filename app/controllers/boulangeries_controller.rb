@@ -1,7 +1,7 @@
 require 'json'
 require 'open-uri'
 class BoulangeriesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :toto]
+  skip_before_action :authenticate_user!, only: [:index, :toto, :indexGeo]
 
   def index
     @boulangeries = Boulangerie.all

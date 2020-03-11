@@ -9,8 +9,10 @@
               <h1 class="fin loc"></h1>
               <p class="pos position"> <%= x.position %></p>
               <div id="container-buttons">
-                <%= link_to new_boulangery_reservation_path(x) do %>
-                  <div class="home-buttons_reserved">Reserver</div>
+                <% if user_signed_in? %>
+                  <a reserv href="">
+                    <div class="home-buttons_reserved">Reserver</div>
+                  </a>
                 <% end %>
                 <a fino href="">
                   <div class="home-buttons_go">GO</div>
@@ -18,13 +20,6 @@
               </div>
             </div>
             <div class="badge">
-              <% if x.badge == "Or" %>
-                <span class="iconify" data-icon="vaadin:medal" data-inline="false" style="color: gold;"></span>
-              <% elsif x.badge == "Argent" %>
-                <span class="iconify" data-icon="vaadin:medal" data-inline="false" style="color: silver;"></span>
-              <% else %>
-                <span class="iconify" data-icon="vaadin:medal" data-inline="false" style="color: rgb(131, 74, 28);"></span>
-              <% end %>
             </div>
             <h2> <%= x.average_rating %></h2>
             <div class="names">

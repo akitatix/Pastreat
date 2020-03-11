@@ -27,11 +27,22 @@ if (document.querySelector('[data-geolocation]')) {
                     ind.forEach((blabla) => {
                       console.log("---------------------------")
                       console.log(blabla.name)
+                      console.log(blabla.badge)
+                      console.log(blabla.id)
                       console.log(counter)
                       console.log(document.querySelectorAll('.name')[counter])
                       document.querySelectorAll('.name')[counter].innerHTML = `${blabla.name}`
                       document.querySelectorAll('.fin')[counter].innerHTML = `${blabla.dist}`
                       document.querySelectorAll('[fino]')[counter].href = `https://www.google.com/maps/dir/?api=1&origin=${position.coords.latitude},${position.coords.longitude}&destination=${blabla["position"]}&travelmode=walking`;
+                      document.querySelectorAll('[reserv]')[counter].href = `/boulangeries/${blabla.id}/reservations/new`
+                      if ( blabla.badge === "Or" ) {
+                        document.querySelectorAll('.badge')[counter].innerHTML = `<span class="iconify" data-icon="vaadin:medal" data-inline="false" style="color: gold;"></span>`
+                      } if (blabla.badge === "Argent") {
+                        document.querySelectorAll('.badge')[counter].innerHTML = `<span class="iconify" data-icon="vaadin:medal" data-inline="false" style="color: silver;"></span>`
+                      } if (blabla.badge === "Bronze") {
+                        document.querySelectorAll('.badge')[counter].innerHTML = `<span class="iconify" data-icon="vaadin:medal" data-inline="false" style="color: rgb(131, 74, 28);"></span>`
+                      }
+
                       counter = counter + 1
                     })
 

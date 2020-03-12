@@ -18,6 +18,7 @@ class ReservationsController < ApplicationController
     @reservation.save
 
     if @reservation.save
+      BoulangerieMailer.with(boulangerie: @boulangerie).reservation.deliver_now
       redirect_to reservations_path
     else
       render :new

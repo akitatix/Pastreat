@@ -1,4 +1,5 @@
 p "Deleting all the content "
+Reservation.destroy_all
 User.destroy_all
 Boulangerie.destroy_all
 Rating.destroy_all

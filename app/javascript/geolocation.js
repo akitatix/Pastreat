@@ -28,11 +28,16 @@ if (document.querySelector('[data-geolocation]')) {
                     let counter = 0
                     ind.forEach((blabla) => {
                       console.log("---------------------------")
-                      console.log(blabla.name)
-                      console.log(blabla.badge)
-                      console.log(blabla.id)
-                      console.log(counter)
-                      console.log(document.querySelectorAll('.name')[counter])
+                      // console.log(blabla.name)
+                      // console.log(blabla.badge)
+                      // console.log(blabla.id)
+                      // console.log(counter)
+                      // console.log(document.querySelectorAll('.name')[counter])
+                      console.log(document.querySelectorAll('.bg')[counter])
+
+                      const googlePath = `https://www.google.com/maps/dir/?api=1&origin=${position.coords.latitude},${position.coords.longitude}&destination=${blabla["position"]}&travelmode=walking`
+                      document.querySelectorAll('.bg')[counter].dataset.googlePath = googlePath
+
                       document.querySelectorAll('.name')[counter].innerHTML = `${blabla.name}`
                       document.querySelectorAll('.fin')[counter].innerHTML = `${blabla.dist}`
                       document.querySelectorAll('[fino]')[counter].href = `https://www.google.com/maps/dir/?api=1&origin=${position.coords.latitude},${position.coords.longitude}&destination=${blabla["position"]}&travelmode=walking`;
@@ -111,6 +116,8 @@ if (document.querySelector('[data-geolocation]')) {
                       console.log(document.querySelectorAll('.name')[counter])
                       document.querySelectorAll('.name')[counter].innerHTML = `${blabla.name}`
                       document.querySelectorAll('.fin')[counter].innerHTML = `${blabla.dist}`
+                      console.log("------------------------------------ :-)")
+                      console.log(`https://www.google.com/maps/dir/?api=1&origin=${position.coords.latitude},${position.coords.longitude}&destination=${blabla["position"]}&travelmode=walking`)
                       document.querySelectorAll('[fino]')[counter].href = `https://www.google.com/maps/dir/?api=1&origin=${position.coords.latitude},${position.coords.longitude}&destination=${blabla["position"]}&travelmode=walking`;
                       document.querySelectorAll('img.bakery-bg')[counter].src = blabla.image;
                       if (document.querySelectorAll('home-buttons_reserve')) {

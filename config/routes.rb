@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   resources :boulangeries do
     resources :reservations, only: [:new, :create]
     resources :ratings, only: [:new, :create]
+    member do
+      post :visit
+    end
   end
 
   get '/toto', to: 'boulangeries#toto'

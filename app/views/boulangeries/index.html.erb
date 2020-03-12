@@ -7,7 +7,7 @@
       <% @boulangeries.each do |x|   %>
           <li style="" class="bg h-full position_relative" data-boulangerie-id="<%= x.id %>">
             <div data-geolocation>
-              <img src="http://placehold.it/200x200" class="bakery-bg" alt="">
+              <img src="https://cdn2.iconfinder.com/data/icons/dark-action-bar-2/96/refresh-512.png" class="bakery-bg" alt="">
               <h1 class="fin loc"></h1>
               <p class="pos position"> <%= x.position %></p>
               <div id="container-buttons">
@@ -17,9 +17,8 @@
                   </a>
                 <% end %>
                 <a fino href="">
-                  <div class="home-buttons_go">GO</div>
                   <hr>
-                    <%= link_to "GOGOGO", visit_boulangery_path(x), remote: true, method: :post %>
+                    <%= link_to "GO", visit_boulangery_path(x), remote: true, method: :post, :class => "home-buttons_go" %>
                   <hr>
                 </a>
               </div>

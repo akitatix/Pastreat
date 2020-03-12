@@ -5,7 +5,7 @@
     <ul class="glide__slides">
       <% lol = 0 %>
       <% @boulangeries.each do |x|   %>
-          <li style="" class="bg h-full position_relative">
+          <li style="" class="bg h-full position_relative" data-boulangerie-id="<%= x.id %>">
             <div data-geolocation>
               <img src="http://placehold.it/200x200" class="bakery-bg" alt="">
               <h1 class="fin loc"></h1>
@@ -18,6 +18,9 @@
                 <% end %>
                 <a fino href="">
                   <div class="home-buttons_go">GO</div>
+                  <hr>
+                    <%= link_to "GOGOGO", visit_boulangery_path(x), remote: true, method: :post %>
+                  <hr>
                 </a>
               </div>
             </div>

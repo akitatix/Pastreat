@@ -1,4 +1,6 @@
 class RatingsController < ApplicationController
+  skip_before_action :redirect_voting
+
   def new
     @boulangerie = Boulangerie.find(params[:boulangery_id])
     @rating = Rating.new
@@ -9,10 +11,10 @@ class RatingsController < ApplicationController
     @rating = Rating.new(rating_params)
     @rating.user = current_user
     @rating.boulangerie = @boulangerie
-    @rating.save
 
     if @rating.save
-      redirect_to reservations_path
+      current_user.update(boulangerie: nil)
+      redirect_to root_path
     else
       render :new
     end

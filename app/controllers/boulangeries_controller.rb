@@ -18,6 +18,11 @@ class BoulangeriesController < ApplicationController
     render json: { boulangeries: @boulangeries }
   end
 
+  def visit
+    @boulangerie = Boulangerie.find(params[:id])
+    current_user.update!(boulangerie: @boulangerie)
+  end
+
   def ranking
     @boul_or = Boulangerie.where({badge: "Or"})
     @boul_ar = Boulangerie.where({badge: "Argent"})

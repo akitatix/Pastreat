@@ -17,6 +17,7 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'awesome_print'
 gem 'letter_opener', group: :development
+gem 'dotenv-rails', groups: [:development, :test]
 
 group :development do
   gem 'web-console', '>= 3.3.0'

@@ -9,7 +9,12 @@ class BoulangeriesController < ApplicationController
   end
 
   def indexGeo
-    @boulangeries = Boulangerie.all
+    @boulangeries = Boulangerie.all.map do |b|
+      b = b.attributes
+      b[:image_url] = ActionController::Base.helpers.image_path(b["image"])
+      b
+    end
+
     render json: { boulangeries: @boulangeries }
   end
 

@@ -5,14 +5,13 @@
       <div class="reservation_principale">
         <div class="main">
           <h2><%= x.boulangerie.name  %> </h2>
-          <p><%= x.date %></p>
-          <p> <%= x.price %> </p>
-          <p> <%= x.nb_pc %> pain(s) au chocolat </p>
-          <p> <%= x.nb_cr %> croissant(s) </p>
+          <p> Reservation a venir chercher le : <%= x.date %></p>
+          <p>  Prix: <%= x.price %> € </p>
         </div>
 
         <div class="recapitulatif" >
-
+          <p> Pain au chocolats : <%= x.nb_pc %> </p>
+          <p> Croissants : <%= x.nb_cr %> </p>
         </div>
       </div>
     <% end %>

@@ -1,6 +1,6 @@
 class Boulangerie < ApplicationRecord
   has_many :ratings
-  has_many :reservations
+  has_many :reservations, dependent: :destroy
 
   def average_rating
     ratings.average(:star)

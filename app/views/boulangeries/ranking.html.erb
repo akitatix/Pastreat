@@ -14,7 +14,7 @@
       </div>
       <div class="flex">
         <span class="iconify" data-icon="vaadin:medal" data-inline="false" style="color: gold;"></span>
-        <h2> <%= x.average_rating  %> </h2>
+        <h2> <%= x.average_rating.round(2)  %> </h2>
       </div>
     </div>
   <% end %>
@@ -29,7 +29,7 @@
       </div>
       <div class="flex">
         <span class="iconify" data-icon="vaadin:medal" data-inline="false" style="color: silver;"></span>
-        <h2> <%= x.average_rating %> </h2>
+        <h2> <%= x.average_rating.round(2) %> </h2>
       </div>
     </div>
   <% end %>
@@ -44,7 +44,7 @@
       </div>
       <div class="flex">
         <span class="iconify" data-icon="vaadin:medal" data-inline="false" style="color: rgb(131, 74, 28);"></span>
-        <h2> <%= x.average_rating %></h2>
+        <h2> <%= x.average_rating.round(2) %></h2>
       </div>
     </div>
   <% end %>

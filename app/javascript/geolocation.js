@@ -36,7 +36,8 @@ if (document.querySelector('[data-geolocation]')) {
                       document.querySelectorAll('.name')[counter].innerHTML = `${blabla.name}`
                       document.querySelectorAll('.fin')[counter].innerHTML = `${blabla.dist}`
                       document.querySelectorAll('[fino]')[counter].href = `https://www.google.com/maps/dir/?api=1&origin=${position.coords.latitude},${position.coords.longitude}&destination=${blabla["position"]}&travelmode=walking`;
-                      document.querySelectorAll('.bg')[counter].style = `background: url(${blabla.image});`
+                      // document.querySelectorAll('.bg')[counter].style = `background: url(${blabla.image});background-repeat: no-repeat; background-size : cover; background-position: center;`
+                      document.querySelectorAll('img.bakery-bg')[counter].src = blabla.image;
                       if (document.querySelectorAll('home-buttons_reserve')) {
                         document.querySelectorAll('[reserv]')[counter].href = `/boulangeries/${blabla.id}/reservations/new`
                       }
@@ -106,16 +107,31 @@ if (document.querySelector('[data-geolocation]')) {
                       console.log("---------------------------")
                       console.log(blabla.name)
                       console.log(counter)
+                      console.log(lol)
                       console.log(document.querySelectorAll('.name')[counter])
                       document.querySelectorAll('.name')[counter].innerHTML = `${blabla.name}`
                       document.querySelectorAll('.fin')[counter].innerHTML = `${blabla.dist}`
                       document.querySelectorAll('[fino]')[counter].href = `https://www.google.com/maps/dir/?api=1&origin=${position.coords.latitude},${position.coords.longitude}&destination=${blabla["position"]}&travelmode=walking`;
+                      document.querySelectorAll('img.bakery-bg')[counter].src = blabla.image;
+                      if (document.querySelectorAll('home-buttons_reserve')) {
+                        document.querySelectorAll('[reserv]')[counter].href = `/boulangeries/${blabla.id}/reservations/new`
+                      }
+                      if ( blabla.badge === "Or" ) {
+                        document.querySelectorAll('.badge')[counter].innerHTML = `<span class="iconify" data-icon="vaadin:medal" data-inline="false" style="color: gold;"></span>`
+                      } if (blabla.badge === "Argent") {
+                        document.querySelectorAll('.badge')[counter].innerHTML = `<span class="iconify" data-icon="vaadin:medal" data-inline="false" style="color: silver;"></span>`
+                      } if (blabla.badge === "Bronze") {
+                        document.querySelectorAll('.badge')[counter].innerHTML = `<span class="iconify" data-icon="vaadin:medal" data-inline="false" style="color: rgb(131, 74, 28);"></span>`
+                      }
+
                       counter = counter + 1
                     })
 
                   });
               })
+              new Glide('.glide').mount();
             });
+
       // document.querySelectorAll('[data-geolocation]').forEach((element) => {
       //   const pos = element.querySelector('.pos')
       //   const boul_pos = pos.innerHTML.replace(/\s/g, '')
@@ -134,6 +150,6 @@ if (document.querySelector('[data-geolocation]')) {
       // });
     },
     {
-      timeout: 1500000  }
+      timeout: 30000  }
   );
 }

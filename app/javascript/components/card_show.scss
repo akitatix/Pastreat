@@ -35,11 +35,17 @@
   object-fit: cover;
   background-repeat: no-repeat;
   // background-image: linear-gradient(white, transparent);
-  background: url("https://images.unsplash.com/photo-1534432182912-63863115e106?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
+  // background: url("https://images.unsplash.com/photo-1534432182912-63863115e106?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
 }
 
 .position {
   display: none;
+}
+
+.bakery-bg {
+  padding: 20px;
+  margin-top: 120px;
+
 }
 
 .name {
@@ -51,6 +57,13 @@
   top: 20px;
   left: 20px;
   white-space: normal;
+
+  .h2 {
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    font-size: 32px;
+    font-weight: bold;
+}
 }
 
 .loc {

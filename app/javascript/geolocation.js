@@ -36,7 +36,8 @@ if (document.querySelector('[data-geolocation]')) {
                       document.querySelectorAll('.name')[counter].innerHTML = `${blabla.name}`
                       document.querySelectorAll('.fin')[counter].innerHTML = `${blabla.dist}`
                       document.querySelectorAll('[fino]')[counter].href = `https://www.google.com/maps/dir/?api=1&origin=${position.coords.latitude},${position.coords.longitude}&destination=${blabla["position"]}&travelmode=walking`;
-                      document.querySelectorAll('.bg')[counter].style = `background: url(${blabla.image});`
+                      // document.querySelectorAll('.bg')[counter].style = `background: url(${blabla.image});background-repeat: no-repeat; background-size : cover; background-position: center;`
+                      document.querySelectorAll('img.bakery-bg')[counter].src = blabla.image;
                       if (document.querySelectorAll('home-buttons_reserve')) {
                         document.querySelectorAll('[reserv]')[counter].href = `/boulangeries/${blabla.id}/reservations/new`
                       }
@@ -106,11 +107,12 @@ if (document.querySelector('[data-geolocation]')) {
                       console.log("---------------------------")
                       console.log(blabla.name)
                       console.log(counter)
+                      console.log(lol)
                       console.log(document.querySelectorAll('.name')[counter])
                       document.querySelectorAll('.name')[counter].innerHTML = `${blabla.name}`
                       document.querySelectorAll('.fin')[counter].innerHTML = `${blabla.dist}`
                       document.querySelectorAll('[fino]')[counter].href = `https://www.google.com/maps/dir/?api=1&origin=${position.coords.latitude},${position.coords.longitude}&destination=${blabla["position"]}&travelmode=walking`;
-                      document.querySelectorAll('.bg')[counter].style = `background: url(${blabla.image});`
+                      document.querySelectorAll('img.bakery-bg')[counter].src = blabla.image;
                       if (document.querySelectorAll('home-buttons_reserve')) {
                         document.querySelectorAll('[reserv]')[counter].href = `/boulangeries/${blabla.id}/reservations/new`
                       }
@@ -148,6 +150,6 @@ if (document.querySelector('[data-geolocation]')) {
       // });
     },
     {
-      timeout: 1500000  }
+      timeout: 30000  }
   );
 }

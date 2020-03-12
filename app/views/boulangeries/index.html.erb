@@ -25,9 +25,11 @@
             </div>
             <div class="badge">
             </div>
+
             <% if x.average_rating != nil  %>
-              <h2> <%= x.average_rating.round(2) %></h2>
+              <h2 class="rating"> <%= x.average_rating.round(2) %>⭐️</h2>
             <% end  %>
+
             <div class="names">
               <h2 class="name"></h2>
             </div>

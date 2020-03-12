@@ -1,59 +1,65 @@
-<%= simple_form_for [@boulangerie, @reservation] do |f| %>
-  <%= f.input :date, collection: [Date.tomorrow , Date.tomorrow.tomorrow ] %>
-  <%= f.input :nb_cr %>
-  <%= f.input :nb_pc %>
-  <%= f.button :submit %>
-<% end %>
 
-
-
-<!-- <div class="titre-resa">
+<div class="titre-resa" style="background-color: #721b65">
   <h1>Entrez les informations de votre réservation ! 😋</h1>
 </div>
 
+<div id="form-reservation" >
+  <h2>Combien de 🥐 souhaitez-vous réserver ?</h2>
+  <br>
+  <%= simple_form_for [@boulangerie, @reservation] do |f| %>
+  <%= f.input :nb_cr %>
+  <br>
+
+  <h2>Combien de pain(s) au 🍫 souhaitez-vous réserver ? </h2>
+  <br>
+  <%= f.input :nb_pc %>
+</div>
+<br>
+
+<div id="date-reservation" >
+  <h2>Sélectionner la date de votre réservation:</h2>
+  <br>
+  <%= f.input :date %>
+  <br>
+  <%= f.button :submit %>
+  </div>
+  <% end %>
+
+</div>
+
+
+    <!--<div class="titre-resa">
+  <h1>Entrez les informations de votre réservation ! 😋</h1>
+</div>
 <div id="form-select">
-
   <p>Combien de 🥐 souhaitez vous réserver ? </p><br>
-
   <form action="/boulangeries/<%= @boulangerie.id %>/reservations" method="POST">
-
     <input type="radio" id="0" name="nb_cr" value="0" checked>
     <label class="container" for="0">0 croissant</label><br>
     <span class="checkmark"></span>
-
     <input type="radio" id="1" name="nb_cr" value="1">
     <label for="1">1 croissant</label><br>
-
     <input type="radio" id="2" name="nb_cr" value="2">
     <label for="2">2 croissants</label><br>
-
     <input type="radio" id="3" name="nb_cr" value="3">
     <label for="3">3 croissants</label><br>
-
     <input type="radio" id="4" name="nb_cr" value="4">
     <label for="4">4 croissants ou plus</label>
     <input type="number" id="4" name="nb_cr" value="4 ou plus !"><br>
-
     <br>
     <br>
-
     <p>Combien de pain(s) au 🍫 souhaitez-vous réserver ? </p><br>
     <input type="radio" id="0" name="nb_pc" value="0" checked>
     <label for="0">0 pain au chocolat</label><br>
-
     <input type="radio" id="1" name="nb_pc" value="1">
     <label for="1">1 pain au chocolat</label><br>
-
     <input type="radio" id="2" name="nb_pc" value="2">
     <label for="2">2 pains au chocolat</label><br>
-
     <input type="radio" id="3" name="nb_pc" value="3">
     <label for="3">3 pains au chocolat</label><br>
-
     <input type="radio" id="4" name="nb_pc" value="4">
     <label for="4">4 pains au 🍫 ou plus</label>
     <input type="number" id="4" name="nb_pc" value="4 ou plus !">
-
     <br>
     <br> -->
     <!--  <input type="number" id="4" name="nb_cr">
@@ -61,16 +67,4 @@
 
    <!--  <input type="submit" value="Valider la réservation ! ">
   </form>
-
 </div> -->
-
-<!-- <%= simple_form_for [@boulangerie, @reservation] do |f| %>
-<%= f.input :date %>
-
-  <%= f.input :nb_cr %>
-  <%= f.input :nb_pc %>
-  <%= f.button :submit %>
-<% end %>
-
-</div>
-

@@ -9,7 +9,7 @@ class BoulangerieMailer < ApplicationMailer
     @boulangerie = params[:boulangerie]
 
     mail(
-      to: @boulangerie.email , #@boulangerie.email,
+      to: 'gast.paulantoine@gmail.com',
       subject: 'Pastreat: une nouvelle réservation !'
     )
   end

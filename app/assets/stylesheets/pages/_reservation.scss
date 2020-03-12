@@ -1,16 +1,24 @@
 .titre-resa h1 {
   color:white;
-  background-color: #721b65;
-  height: 10vh;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 16px;
 }
 
-#form-select {
-  margin:10px;
-  font-size: 16px;
-  height: 96vh;
+#form-reservation {
+  color:#CC6C28;
+  background-color: #F0F0F0;
+  margin-top: 30px;
+  margin: 10px;
+  text-align: left;
 }
 
+#date-reservation {
+  color:#CC6C28;
+  background-color: #F0F0F0;
+  margin-top: 30px;
+  margin: 10px;
+  text-align: left;
+}

@@ -1,13 +1,34 @@
-<%= simple_form_for [@boulangerie, @reservation] do |f| %>
-  <%= f.input :date %>
+
+<div class="titre-resa" style="background-color: #721b65">
+  <h1>Entrez les informations de votre réservation ! 😋</h1>
+</div>
+
+<div id="form-reservation" >
+  <h2>Combien de 🥐 souhaitez-vous réserver ?</h2>
+  <br>
+  <%= simple_form_for [@boulangerie, @reservation] do |f| %>
   <%= f.input :nb_cr %>
+  <br>
+
+  <h2>Combien de pain(s) au 🍫 souhaitez-vous réserver ? </h2>
+  <br>
   <%= f.input :nb_pc %>
+</div>
+<br>
+
+<div id="date-reservation" >
+  <h2>Sélectionner la date de votre réservation:</h2>
+  <br>
+  <%= f.input :date %>
+  <br>
   <%= f.button :submit %>
-<% end %>
+  </div>
+  <% end %>
+
+</div>
 
 
-
-<!-- <div class="titre-resa">
+    <!--<div class="titre-resa">
   <h1>Entrez les informations de votre réservation ! 😋</h1>
 </div>
 <div id="form-select">

@@ -1,4 +1,13 @@
-<div class="titre-resa">
+<%= simple_form_for [@boulangerie, @reservation] do |f| %>
+  <%= f.input :date %>
+  <%= f.input :nb_cr %>
+  <%= f.input :nb_pc %>
+  <%= f.button :submit %>
+<% end %>
+
+
+
+<!-- <div class="titre-resa">
   <h1>Entrez les informations de votre réservation ! 😋</h1>
 </div>
 
@@ -46,16 +55,18 @@
     <input type="number" id="4" name="nb_pc" value="4 ou plus !">
 
     <br>
-    <br>
+    <br> -->
     <!--  <input type="number" id="4" name="nb_cr">
     <label for="4">Plus de 4 croissants ?</label> -->
 
-  <%= link to index_reservation %>
-    <input type="submit" value="Valider la réservation ! ">
+   <!--  <input type="submit" value="Valider la réservation ! ">
   </form>
 
-  <%= simple_form_for [@boulangerie, @reservation] do |f| %>
-  <%= f.input :date %>
+</div> -->
+
+<!-- <%= simple_form_for [@boulangerie, @reservation] do |f| %>
+<%= f.input :date %>
+
   <%= f.input :nb_cr %>
   <%= f.input :nb_pc %>
   <%= f.button :submit %>

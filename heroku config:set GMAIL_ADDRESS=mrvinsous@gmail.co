@@ -1,0 +1,1 @@
+heroku config:set GMAIL_ADDRESS=mrvinsous@gmail.com GMAIL_APP_PASSWORD=cfvpndexgvnsojwi

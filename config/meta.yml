@@ -1,5 +1,5 @@
 meta_product_name: "Pastreat"
-meta_title: "Pastreat - Toute les boulangeries proche de vous, dans votre poche."
-meta_description: "Trouvez rapidement et simplement les boulangeries artisanal proche de vous en quelque secondes, et tout cela de manière simple avec Pastreat !"
+meta_title: "Pastreat - Toutes les boulangeries proche de vous dans votre poche."
+meta_description: "Trouvez rapidement et simplement les boulangeries artisanales proches de vous en quelques secondes, et tout cela de manière simple avec Pastreat !"
 meta_image: "cover.png" # should exist in `app/assets/images/`
 twitter_account: "@product_twitter_account"   # required for Twitter Cards

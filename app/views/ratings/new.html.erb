@@ -1,6 +1,12 @@
-<h1>Ratings#new</h1>
+<div class="mx-auto px-2">
+  <h1 class="text-center my-4">How was your experience?</h1>
 
-<%= simple_form_for [@boulangerie, @rating] do |f| %>
-  <%= f.input :star %>
-  <%= f.button :submit %>
-<% end %>
+  <div class="text-center">
+    <%= simple_form_for [@boulangerie, @rating] do |f| %>
+      <div class="my-8">
+        <%= f.input :star, as: :select, collection: [1, 2, 3, 4, 5], label: false %>
+      </div>
+      <%= f.button :submit, 'Save', class: 'px-4 py-2' %>
+    <% end %>
+  </div>
+</div>

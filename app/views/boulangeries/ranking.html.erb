@@ -3,7 +3,7 @@
     <span class="iconify" data-icon="ant-design:crown-filled" data-inline="false"></span>
     <h1>Ranking</h1>
   </div>
-  <% @boul_or.sort_by { |x| x.average_rating }.each do |x| %>
+  <% @boul_or.sort_by { |x| -x.average_rating }.each do |x| %>
   <% @count += 1 %>
     <div class="cardprincipal">
       <div class="flex ">
@@ -18,7 +18,7 @@
       </div>
     </div>
   <% end %>
-  <% @boul_ar.sort_by { |x| x.average_rating }.each do |x| %>
+  <% @boul_ar.sort_by { |x| -x.average_rating }.each do |x| %>
   <% @count += 1 %>
     <div class="cardprincipal">
       <div class="flex ">
@@ -33,7 +33,7 @@
       </div>
     </div>
   <% end %>
-  <% @boul_br.sort_by { |x| x.average_rating }.each do |x| %>
+  <% @boul_br.sort_by { |x| -x.average_rating }.each do |x| %>
   <% @count += 1 %>
     <div class="cardprincipal">
       <div class="flex ">
@@ -48,4 +48,16 @@
       </div>
     </div>
   <% end %>
+  <div class="cardprincipal">
+      <div class="flex ">
+        <h1> o </h1>
+      </div>
+      <div class="flex flex-grow justify-around">
+        <h2> o </h2>
+      </div>
+      <div class="flex">
+        <span class="iconify" data-icon="vaadin:medal" data-inline="false" style="color: rgb(131, 74, 28);"></span>
+        <h2> o </h2>
+      </div>
+    </div>
 </div>

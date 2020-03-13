@@ -15,3 +15,12 @@
 // Optional Theme Stylesheet
 @import "@glidejs/glide/src/assets/sass/glide.theme";
 
+.gl-star-rating-text {
+  display: none;
+}
+
+.gl-star-rating-stars > span {
+  height: 35px;
+  width: 35px;
+  background-size: 35px;
+}
